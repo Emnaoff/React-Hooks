@@ -11,7 +11,7 @@ import Footer from './Components/Footer/footer';
 function App() {
 const [movieList,setMovieList]=useState(movies);
 const addMovie =(newMovie) =>{
-  setMovieList([...movies,newMovie]);
+  setMovieList([...movieList,newMovie]);
 }
 
   return (

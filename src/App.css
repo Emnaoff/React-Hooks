@@ -1,0 +1,26 @@
+.App {     
+    background-image: url(stars.jpg);    
+    /* background-position: 0px 0px;    
+    background-repeat: repeat-x;     */
+    -webkit-animation: backgroundScroll 20s linear infinite;
+     animation: backgroundScroll 20s linear infinite; 
+}
+@-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
+    }
+  
+    @keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -400px 0;}
+    }
+
+
+.Start{
+display:flex;
+justify-content: space-between;
+
+}
+.addButton{
+margin-left: 590px;
+}

@@ -24,3 +24,26 @@ justify-content: space-between;
 .addButton{
 margin-left: 590px;
 }
+
+.TitleDet{
+    color: ghostwhite;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    color: ghostwhite;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imagedet{
+    width: 300px;
+    height: 400px;
+}
+.Dets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}

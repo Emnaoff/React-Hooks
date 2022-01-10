@@ -37,7 +37,7 @@ const [rate,setrate]=useState(2);
 
     <Route exact path='/'> <MovieList movieList={movieList}  search={search} rate={rate} /> </Route>
     
-    <Route path='/Details/:id' render={ ()=> <Details {...props} what={Movies}/>} /> 
+    <Route path='/Details/:id' render={ (props)=> <Details {...props} what={Movies}/>} /> 
       
     </Switch>
 

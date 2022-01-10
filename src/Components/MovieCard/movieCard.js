@@ -1,13 +1,13 @@
-import React,{useState}from 'react';
-import {Card,Button,Modal} from 'react-bootstrap';
+import React from 'react';
+import {Card,Button} from 'react-bootstrap';
 import Rating from '../Rating/rating';
+import {Link} from 'react-router-dom';
 
 function MovieCard({movie}) {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
     return (
         <div className="movie-card">
+
 <Card style={{ width: '18rem',backgroundColor: 'black' ,color: 'white' }}>
   <Card.Img variant="top" src={movie.image} />
   <Card.Body>
@@ -18,32 +18,12 @@ function MovieCard({movie}) {
     <Card.Text>
       <Rating rate={movie.rating}/>
     </Card.Text>
-    <Card.Text>
-      {movie.description}
-    </Card.Text>
-    <Button variant="warning" onClick={handleShow}>
-        view Trailer
-      </Button>
-
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Trailer</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {movie.trailer}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="danger" onClick={handleClose}>
-            Close
-          </Button>
-          
-        </Modal.Footer>
-      </Modal>
+    
+    <Link to={`/Details/${movie.id}`}>
+  <Button variant="secondary">View More Details</Button>
+  </Link>
+      
+       
   </Card.Body>
 </Card>
             
@@ -51,4 +31,4 @@ function MovieCard({movie}) {
     )
 }
 
-export default MovieCard
+export default MovieCard;

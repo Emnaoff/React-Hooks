@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar,Container,Nav,NavDropdown} from 'react-bootstrap';
-
+import {Link} from 'react-router-dom';
 
 function navbar() {
     return (
@@ -15,8 +15,8 @@ function navbar() {
     style={{ maxHeight: '100px' }}
     navbarScroll
   >
-    <Nav.Link href="#action1">Home</Nav.Link>
-    <Nav.Link href="#action2">Latest</Nav.Link>
+    <Nav.Link as= {Link} to='/'> Home</Nav.Link>
+    <Nav.Link as={Link} to='Latest'>Latest</Nav.Link>
     <NavDropdown title="Favourites" id="navbarScrollingDropdown">
     </NavDropdown>
   </Nav>

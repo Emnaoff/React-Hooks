@@ -12,7 +12,7 @@ function footer() {
  
  <p>Join our Newsletter for more.</p>
  
- <a href="https://mail.yahoo.com/d/folders/1" ><Button  variant="warning">You are one Click away!</Button></a>
+ <a href="https://mail.yahoo.com" ><Button  variant="warning">You are one Click away!</Button></a>
  <hr/>
  <p style={{color: 'grey'}}>Copyrights © Tunflix 2021.</p>
             

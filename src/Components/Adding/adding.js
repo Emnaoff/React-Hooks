@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button,Modal,Form} from 'react-bootstrap';
 
-export default function Adding({addMovie}) {
+export default function Adding({newMovie}) {
 
     /*The modals functions*/
     const [show, setShow] = useState(false);
@@ -17,7 +17,7 @@ export default function Adding({addMovie}) {
 
 
    const addNewMovie =()=>{
-          addMovie({title,type,description,image,rating,trailer})
+    newMovie({title,type,description,image,rating,trailer})
           handleClose()
    };
    
@@ -48,23 +48,23 @@ export default function Adding({addMovie}) {
           <Form>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Title</Form.Label>
-    <Form.Control type="email" placeholder="Title"  onInput={(el)=>setTitle(el.target.value)}/>
+    <Form.Control type="email" placeholder="Title"  onChange={(el)=>setTitle(el.target.value)}/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Description</Form.Label>
-    <Form.Control type="email" placeholder="Brief description" onInput={(el)=>setDescription(el.target.value)}/>
+    <Form.Control type="email" placeholder="Brief description" onChange={(el)=>setDescription(el.target.value)}/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Poster</Form.Label>
-    <Form.Control type="email" placeholder="The link for official poster here" onInput={(el)=>setImage(el.target.value)}/>
+    <Form.Control type="email" placeholder="The link for official poster here" onChange={(el)=>setImage(el.target.value)}/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Rating</Form.Label>
-    <Form.Control type="email" placeholder="Rate your experience with the movie here"onInput={(el)=>setRating(el.target.value)} />
+    <Form.Control type="email" placeholder="Rate your experience with the movie here" onChange={(el)=>setRating(el.target.value)} />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Type</Form.Label>
-    <Form.Control type="email" placeholder="Rate your experience with the movie here"onInput={(el)=>setType(el.target.value)} />
+    <Form.Control type="email" placeholder="Rate your experience with the movie here"onChange={(el)=>setType(el.target.value)} />
   </Form.Group>
   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
     <Form.Label>Movie Trailer </Form.Label>
@@ -79,14 +79,13 @@ export default function Adding({addMovie}) {
           {/*The modals buttons*/}
 
           <Modal.Footer>
-          <Button variant="danger" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
           <Button variant="warning" onClick={addNewMovie}>
             Add
           </Button>
         </Modal.Footer>
-
         </Modal>
         </div>
       </>

@@ -1,16 +1,18 @@
-import React ,{useState} from 'react';
+import React  from 'react';
 import {Form,FormControl,Button} from 'react-bootstrap';
 import Rating from '../Rating/rating';
 import  './filter.css';
 
-function Filter() {
+function Filter({setsearch,setrate,rate}) {
 
   
 
     return (
         <div>
           <div className="btn-group">
-    <Rating/>
+
+    
+
     </div>
              <Form className="d-flex">
     <FormControl
@@ -20,16 +22,20 @@ function Filter() {
       aria-label="Search"
 
       
-      
+      onChange={(e)=>setsearch((e.target.value))}
       
     />
     
-    <Button variant="warning">Search</Button>
+    <Button variant="warning" >Search</Button>
     
     
   </Form>
+
+
+         <Rating rate={rate} setrate={setrate}/>
+
         </div>
     )
 }
 
-export default Filter
+export default Filter;
